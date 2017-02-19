@@ -26,6 +26,7 @@ public class ButtonListener implements ActionListener {
 
         }
         if (e.getActionCommand().equals("Roll!")) {
+            DiceRoller.total = 0;
             int rolls = Integer.parseInt(DiceRoller.rollsLeft.getText());
             if (rolls > 0) {
                 for (int i = 0; i < DiceRoller.dice.length; i++) {
