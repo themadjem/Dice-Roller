@@ -11,6 +11,9 @@ public class ButtonListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand().equals("Instructions")){
+            Yahtzee.instructions();
+        }
 
         if (e.getActionCommand().equals("Score Total")) {
             ScoreCard.scoreSection(ScoreCard.upperScores1x, 1, ScoreCard.UPPER_SECTION);

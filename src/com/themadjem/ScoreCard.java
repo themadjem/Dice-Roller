@@ -13,7 +13,8 @@ public class ScoreCard implements Runnable {
     private static final Exception INVALID_SECTION = new Exception("Invalid Section");
 
     private JPanel top = new JPanel(); //panel for the top section
-    private JLabel title = new JLabel("Upper Section:                   Yahtzee"); //title label
+    private JLabel title = new JLabel("Upper Section:            Yahtzee             "); //title label
+    JButton instr = new JButton("Instructions");
 
     /**
      * Panel and components for the upper scoring section
@@ -129,6 +130,8 @@ public class ScoreCard implements Runnable {
         f.setResizable(false); //makes window not resizable
 
         top.add(title); //adding the title to the top pane
+        top.add(instr);
+        instr.addActionListener(new ButtonListener());
         f.add(top, BorderLayout.NORTH); //adds the top pane to the frame in the NORTH section
 
         c.setLayout(new BorderLayout());
