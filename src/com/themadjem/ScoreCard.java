@@ -125,7 +125,7 @@ public class ScoreCard implements Runnable {
     public ScoreCard(String playerName) {
         JFrame f = new JFrame("Name: " + playerName); //creates the frame (window container)
         f.setLayout(new BorderLayout()); //sets the layout of the frame
-        f.setSize(350, 640); //sets the dimensions of the frame
+        f.setSize(350, 655); //sets the dimensions of the frame
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //makes the [x] button close the application
         f.setResizable(false); //makes window not resizable
 
