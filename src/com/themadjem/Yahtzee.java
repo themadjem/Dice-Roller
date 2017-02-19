@@ -2,6 +2,9 @@ package com.themadjem;
 
 import javax.swing.*;
 
+/**
+ * @version 1.1  
+ */
 public class Yahtzee {
     private static String howToPlay =
             "     The object of the game is to score points by rolling five dice " +
@@ -32,12 +35,14 @@ public class Yahtzee {
                     "\n   -Click on any dice to \"keep\" them" +
                     "\n   -Click \"roll\" to roll any unlocked dice" +
                     "\n   -Click \"reset\" to return the dice to blank" +
-                    "\n          and to reset the number of rolls";
+                    "\n          and to reset the number of rolls"+
+                    "\n\n Added in Version 1.1:"+
+                    "\nYou can now double click the roll button to reroll"+
+                    "\nafter the number of rolls left reaches zero"
     private static String howToScore =
             "Enter numbers only into the fields"+
             "\nEnter only normal Yahtzee scores (not multiplied)"+
-            "\nClick \"Score Total\" to calculate scores"+
-            "\n      of all columns"+
+            "\nClick \"Score Total\" to calculate scores of all columns"+
             "\n\nNOTE: The Score Card will multiply the scores for you!";
 
     public static void main(String[] args) {
