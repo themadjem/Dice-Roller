@@ -35,6 +35,21 @@ public class ButtonListener implements ActionListener {
                     }
                 }
                 DiceRoller.rollsLeft.setText(String.valueOf(--rolls));
+            }else if (rolls == 0) {
+                clicks++;
+                if (clicks > 1) {
+                    for (int i = 0; i < DiceRoller.dice.length; i++) {
+                        DiceRoller.dice[i].reset();
+                        DiceRoller.update();
+                        DiceRoller.rollsLeft.setText("3");
+                    }
+                    clicks = 0;
+                    for (int i = 0; i < DiceRoller.dice.length; i++) {
+                        if (!DiceRoller.dice[i].isLocked()) {
+                            DiceRoller.dice[i].rollDie();
+                        }
+                    }
+                }
             }
             DiceRoller.update();
 
